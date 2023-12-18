@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Display some text when the checkbox is checked:</p>
+
+
+<label>
+	<input type="checkbox" onclick="myFunction()">
+	AAA
+</label><br/>
+<label>
+	<input type="checkbox" onclick="myFunction()">
+	BBB
+</label> <br/>
+<label>
+	<input type="checkbox" onclick="myFunction()">
+	CCC
+</label> <br/>
+
+
+
+<p style="display:none">AAA*2k</p>
+<p style="display:none">BBB*0.6k</p>
+<p style="display:none">CCC*1k</p>
+
+<textarea id="myInput" rows="10" cols="20"> </textarea>
+
+<script>
+function myFunction() {
+	document.getElementById("myInput").value = "";
+	for (i = 0; i < 3 ;i++){
+		
+		var checkBox = document.querySelectorAll("input")[i];
+		var text = document.querySelectorAll("p")[i+1];
+		let innertext = text.innerText;
+		//let innertext = text.innerHTML;
+		//document.getElementById("myInput").innerHTML = innertext;
+		
+		if (checkBox.checked == true){
+			//text.style.display = "block";
+			document.getElementById("myInput").value += innertext;
+			document.getElementById("myInput").value += "\n";
+		} else {
+			//text.style.display = "none";
+		}
+	}
+}
+</script>
+
+<!--<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+-->
+
+</body>
+</html>
