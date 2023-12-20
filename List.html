@@ -9,20 +9,40 @@
 		font-family:Microsoft Yahei; 
 		font-size: 20px; 
 		display: relative;
+		margin:20px;
+		background-color:#f7efe1;
+		color:#0b0b0b;
+	}
+	h3{
+		text-align:center;
+		font-size: 30px; 
+		border-bottom: 1px solid;
+	}
+	label{
+		
 	}
 	input[type="text"]{
-		font-size:24px;
+		font-size:18px;
 		width:40px;
+		background-color:#e6d7be;
+		margin:2px;
+		border: none;
 	}
 	textarea{
-		font-size:24px;
-		width:160px;
+		font-size:18px;
+		width:120px;
 		height:350px;
 		position: -webkit-sticky; /* Safari */
 		position: fixed;
 		display: block;
 		top: 128px;
-		left:200px;
+		left:230px;
+		background-color:#e6d7be;
+	}
+	button{
+		position: fixed;
+		top: 490px;
+		left:254px;
 	}
 	@media screen and (max-width:600px){
 	
@@ -31,8 +51,10 @@
 <body >
 
 <h3>Inventory List</h3>
-
+<p style="font-size:10px; margin:-27px; text-align:center;">Steven's Kitchen</p>
 <textarea id="myInput" > </textarea>
+<button onclick="selectall()">Select</button>
+<br/>
 
 <p>備料:</p>
 
@@ -528,7 +550,7 @@
 function myFunction() {
 	document.getElementById("myInput").value = "";
 	//document.getElementById("myInput").rows = 4;
-	for (i = 0;  ;i++){
+	for (i = 0; i<79; i++){
 		
 		//var checkBox = document.querySelectorAll("input")[i];
 		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
@@ -542,11 +564,15 @@ function myFunction() {
 			//if (i > 1){
 			//	document.getElementById("myInput").rows += 1;
 			//}
-		} else {
+		} else { 
 			//text.style.display = "none";
 		}
 		//document.getElementById("myInput").value += i;
 	}
+	document.getElementById("myInput").value += "\n感謝";
+}
+function selectall() {
+	document.getElementById("myInput").select();
 }
 </script>
 
