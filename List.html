@@ -2,28 +2,37 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-weith, initial-scale=1; maximum-scale=1"  />
 	<title>叫貨表</title>
 	<style type="text/css">
-	
+	body {
+		font-family:Microsoft Yahei; 
+		font-size: 20px; 
+		display: relative;
+	}
 	input[type="text"]{
 		font-size:24px;
 		width:40px;
 	}
 	textarea{
 		font-size:24px;
-		width:200px;
+		width:160px;
+		height:350px;
 		position: -webkit-sticky; /* Safari */
-		position: sticky;
+		position: fixed;
 		display: block;
-		top: 0px;
-		left:300px;
+		top: 128px;
+		left:200px;
+	}
+	@media screen and (max-width:600px){
+	
 	}
 	</style>
-<body style="font-family:Microsoft Yahei; font-size: 20px; display: relative">
+<body >
 
-<p>Inventory List</p>
+<h3>Inventory List</h3>
 
-<textarea id="myInput" rows="5" cols="20"> </textarea>
+<textarea id="myInput" > </textarea>
 
 <p>備料:</p>
 
