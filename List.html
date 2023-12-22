@@ -207,7 +207,12 @@
 	<input type="text" value="2.4" >
 	k
 </label> <br/>
-
+<label>
+	<input type="checkbox" onclick="myFunction()" name="台梗9號*" value="米袋">
+	台梗9號*
+	<input type="text" value="1" >
+	米袋
+</label> <br/>
 <p>員工餐:</p>
 
 
@@ -549,7 +554,7 @@
 function myFunction() {
 	document.getElementById("myInput").value = "";
 	//document.getElementById("myInput").rows = 4;
-	for (i = 0; i<79; i++){
+	for (i = 0; i<80; i++){
 		
 		//var checkBox = document.querySelectorAll("input")[i];
 		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
