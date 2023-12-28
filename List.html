@@ -28,7 +28,7 @@
 		margin:2px;
 		border: none;
 	}
-	textarea{
+	#myInput{
 		font-size:18px;
 		width:120px;
 		height:350px;
@@ -37,6 +37,12 @@
 		display: block;
 		top: 128px;
 		left:230px;
+		background-color:#e6d7be;
+	}
+	#addtext{
+		font-size:18px;
+		width:180px;
+		height:100px;
 		background-color:#e6d7be;
 	}
 	button{
@@ -546,19 +552,22 @@
 	k
 <br/>
 
+<p>其它:</p>
 
-
-<br/><br/><br/><br/><br/><br/>
+<textarea onchange="myFunction()" id="addtext"></textarea><br/>
+<input type="button" value="Enter" onclick="myFunction()">
 
 <script>
 function myFunction() {
 	document.getElementById("myInput").value = "";
 	//document.getElementById("myInput").rows = 4;
+	
 	for (i = 0; i<80; i++){
 		
 		//var checkBox = document.querySelectorAll("input")[i];
 		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
 		var num = document.querySelectorAll('input[type="text"]')[i].value;
+		var add = document.getElementById("addtext").value;
 		
 		if (checkBox.checked == true){
 			document.getElementById("myInput").value += checkBox.name;
@@ -573,6 +582,7 @@ function myFunction() {
 		}
 		//document.getElementById("myInput").value += i;
 	}
+	document.getElementById("myInput").value += add;
 	document.getElementById("myInput").value += "\n感謝";
 }
 function selectall() {
