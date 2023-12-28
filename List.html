@@ -583,7 +583,11 @@ function myFunction() {
 		//document.getElementById("myInput").value += i;
 	}
 	document.getElementById("myInput").value += add;
+	if (add != ''){
+		document.getElementById("myInput").value += "\n";
+	}
 	document.getElementById("myInput").value += "\n感謝";
+	
 }
 function selectall() {
 	document.getElementById("myInput").select();
