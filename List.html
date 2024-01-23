@@ -303,13 +303,13 @@
 <label>
 	<input type="checkbox" onclick="myFunction()" name="菠菜*" value="k">
 	菠菜*
-</label><input type="text" onchange="myFunction()" value="0.6" >
+</label><input type="text" onchange="myFunction()" value="1" >
 	k
 <br/>
 <label>
 	<input type="checkbox" onclick="myFunction()" name="茼蒿*" value="k">
 	茼蒿*
-</label><input type="text" onchange="myFunction()" value="0.4" >
+</label><input type="text" onchange="myFunction()" value="1" >
 	k
 <br/>
 <label>
@@ -327,7 +327,7 @@
 <label>
 	<input type="checkbox" onclick="myFunction()" name="芥蘭*" value="k">
 	芥蘭*
-</label><input type="text" onchange="myFunction()" value="0.6" >
+</label><input type="text" onchange="myFunction()" value="1" >
 	k
 <br/>
 <label>
@@ -514,6 +514,12 @@
 	顆
 <br/>
 <label>
+	<input type="checkbox" onclick="myFunction()" name="柳橙*" value="顆">
+	柳橙*
+</label><input type="text" onchange="myFunction()" value="4" >
+	顆
+<br/>
+<label>
 	<input type="checkbox" onclick="myFunction()" name="葡萄柚*" value="顆">
 	葡萄柚*
 </label><input type="text" onchange="myFunction()" value="3" >
@@ -562,7 +568,7 @@ function myFunction() {
 	document.getElementById("myInput").value = "";
 	//document.getElementById("myInput").rows = 4;
 	
-	for (i = 0; i<80; i++){
+	for (i = 0; i<81; i++){
 		
 		//var checkBox = document.querySelectorAll("input")[i];
 		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
