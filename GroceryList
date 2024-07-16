@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-weith, initial-scale=1; maximum-scale=1"  />
+	<title>Inventory List of Steven's Kitchen</title>
+	<style type="text/css">
+	body {
+		font-family:Microsoft Yahei; 
+		font-size: 20px; 
+		display: relative;
+		margin:20px;
+		background-color:#f7efe1;
+		color:#0b0b0b;
+	}
+	h3{
+		font-family:Garamond, serif;
+		text-align:center;
+		font-size: 30px; 
+		border-bottom: 1px solid;
+	}
+	label{
+	}
+	input[type="text"]{
+		font-size:18px;
+		width:40px;
+		background-color:#e6d7be;
+		margin:2px;
+		border: none;
+	}
+	#myInput{
+		font-size:18px;
+		width:120px;
+		height:350px;
+		position: -webkit-sticky; /* Safari */
+		position: fixed;
+		display: block;
+		top: 128px;
+		left:230px;
+		background-color:#e6d7be;
+	}
+	#addtext{
+		font-size:18px;
+		width:180px;
+		height:100px;
+		background-color:#e6d7be;
+	}
+	button{
+		position: fixed;
+		top: 490px;
+		left:254px;
+	}
+	@media screen and (max-width:600px){
+	
+	}
+	</style>
+<body >
+<h3>Inventory List</h3>
+<p style="font-size:10px; margin:-27px; text-align:center;">Steven's Kitchen</p>
+<textarea id="myInput" contenteditable="true"> </textarea>
+<button onclick="selectall()">Select</button>
+<br/>
+
+<p>備料:</p>
+
+<label>
+	<input type="checkbox" onclick="myFunction()" name="紅燒鰻罐頭*" value="罐">
+	紅燒鰻罐頭*
+</label><input type="text" onchange="myFunction()" value="6" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="油漬鮪魚罐頭*" value="罐">
+	油漬鮪魚罐頭*
+</label><input type="text" onchange="myFunction()" value="6" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="美玉白汁(甜)*" value="盒">
+	美玉白汁(甜)*
+</label><input type="text" onchange="myFunction()" value="1" >
+	盒
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="美玉白汁(不甜)(康寶百事福)*" value="盒">
+	美玉白汁(不甜)(康寶百事福)*
+</label><input type="text" onchange="myFunction()" value="1" >
+	盒
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="QP醬*" value="">
+	QP醬*
+</label><input type="text" onchange="myFunction()" value="4" >
+	
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="酸豆*" value="罐">
+	酸豆*
+</label><input type="text" onchange="myFunction()" value="1" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="幼條瓜*" value="罐">
+	幼條瓜*
+</label><input type="text" onchange="myFunction()" value="1" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="梅林醬*" value="瓶">
+	梅林醬*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="巴薩米可醋*" value="瓶">
+	巴薩米可醋*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="紅酒醋*" value="瓶">
+	紅酒醋*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="醬油1.5L*" value="瓶">
+	醬油1.5L*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="味霖1.8L*" value="瓶">
+	味霖1.8L*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="柴魚片600g*" value="包">
+	柴魚片600g*
+</label><input type="text" onchange="myFunction()" value="3" >
+	包
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="味島香鬆500g*" value="包">
+	味島香鬆500g*
+</label><input type="text" onchange="myFunction()" value="2" >
+	包
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="老干媽辣醬*" value="罐">
+	老干媽辣醬*
+</label><input type="text" onchange="myFunction()" value="1" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="蕃茄切角*" value="桶">
+	蕃茄切角*
+</label><input type="text" onchange="myFunction()" value="4" >
+	桶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="辣豆瓣醬*" value="瓶">
+	辣豆瓣醬*
+</label><input type="text" onchange="myFunction()" value="2" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="去籽黑橄欖*" value="罐">
+	去籽黑橄欖*
+</label><input type="text" onchange="myFunction()" value="2" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="日本柚子胡椒*" value="罐">
+	日本柚子胡椒*
+</label><input type="text" onchange="myFunction()" value="2" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="煙燻辣椒罐頭*" value="罐">
+	煙燻辣椒罐頭*
+</label><input type="text" onchange="myFunction()" value="2" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="紅胡椒*" value="罐">
+	紅胡椒*
+</label><input type="text" onchange="myFunction()" value="1" >
+	罐
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="大紅袍花椒粒*" value="包">
+	大紅袍花椒粒*
+</label><input type="text" onchange="myFunction()" value="1" >
+	包
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="藤椒油*" value="瓶">
+	藤椒油*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="海鹽片*" value="桶">
+	海鹽片*
+</label><input type="text" onchange="myFunction()" value="1" >
+	桶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="炸油*" value="桶">
+	炸油*
+</label><input type="text" onchange="myFunction()" value="6" >
+	桶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="安佳無鹽奶油*" value="條">
+	安佳無鹽奶油*
+</label><input type="text" onchange="myFunction()" value="4" >
+	條
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="細砂糖*" value="袋">
+	細砂糖*
+</label><input type="text" onchange="myFunction()" value="1" >
+	袋
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="總統牌鮮奶油*" value="瓶">
+	總統牌鮮奶油*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="蜂蜜*" value="桶">
+	蜂蜜*
+</label><input type="text" onchange="myFunction()" value="2" >
+	桶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="半斤袋*" value="捲">
+	半斤袋*
+</label><input type="text" onchange="myFunction()" value="1" >
+	捲
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="六兩袋*" value="包">
+	六兩袋*
+</label><input type="text" onchange="myFunction()" value="2" >
+	包
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="3號夾鍊袋*" value="">
+	3號夾鍊袋*
+</label><input type="text" onchange="myFunction()" value="4" >
+<br/>
+
+<p>員工餐:</p>
+
+
+<label>
+	<input type="checkbox" onclick="myFunction()" name="工研烏醋600cc*" value="瓶">
+	工研烏醋600cc*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="穀物醋*" value="瓶">
+	穀物醋*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="蕃茄醬700g*" value="瓶">
+	蕃茄醬700g*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="胡麻油*" value="瓶">
+	胡麻油*
+</label><input type="text" onchange="myFunction()" value="1" >
+	瓶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="橄欖油3L*" value="桶">
+	橄欖油3L*
+</label><input type="text" onchange="myFunction()" value="2" >
+	桶
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="雞粉補充包*" value="包">
+	雞粉補充包*
+</label><input type="text" onchange="myFunction()" value="1" >
+	包
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="豬里肌*" value="k（厚）">
+	豬里肌*
+</label><input type="text" onchange="myFunction()" value="0.6" >
+	k（厚）
+<br/>
+<label>
+	<input type="checkbox" onclick="myFunction()" name="義大利綜合香辛料*" value="罐">
+	義大利綜合香辛料*
+</label><input type="text" onchange="myFunction()" value="1" >
+	罐
+<br/>
+
+<p>其它:</p>
+
+<textarea onchange="myFunction()" id="addtext"></textarea><br/>
+<input type="button" value="Enter" onclick="myFunction()">
+
+<script>
+function myFunction() {
+	document.getElementById("myInput").value = "";
+	//document.getElementById("myInput").rows = 4;
+	
+	for (i = 0; i<40; i++){
+		
+		//var checkBox = document.querySelectorAll("input")[i];
+		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
+		var num = document.querySelectorAll('input[type="text"]')[i].value;
+		var add = document.getElementById("addtext").value;
+		
+		if (checkBox.checked == true){
+			document.getElementById("myInput").value += checkBox.name;
+			document.getElementById("myInput").value += num;
+			document.getElementById("myInput").value += checkBox.value;
+			document.getElementById("myInput").value += "\n";
+			//if (i > 1){
+			//	document.getElementById("myInput").rows += 1;
+			//}
+		} else { 
+			//text.style.display = "none";
+		}
+		//document.getElementById("myInput").value += i;
+	}
+	document.getElementById("myInput").value += add;
+	if (add != ''){
+		document.getElementById("myInput").value += "\n";
+	}
+	document.getElementById("myInput").value += "\n感謝";
+	
+}
+function selectall() {
+	document.getElementById("myInput").select();
+}
+var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    myFunction();
+  }
+});
+</script>
+
+
+</body>
+</html>
