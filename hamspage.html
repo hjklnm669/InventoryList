@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-weith, initial-scale=1; maximum-scale=1"  />
+	<title>Inventory List of Steven's Kitchen</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+<body >
+<h3>Inventory List</h3>
+<p style="font-size:10px; margin:-27px; text-align:center;">Steven's Kitchen</p>
+<nav id="myNav">
+		<ul>
+			<li>
+			  <a href="foodspage.html">東山</a>
+			</li>
+			<li>
+			  <a href="grocerypage.html">立昌</a>
+			</li>
+			<li>
+			  <a href="hamspage.html">昶翔</a>
+			</li>
+		  </ul>
+	</nav>
+<div>
+	<div id="sumtext">
+		<textarea id="myInput" contenteditable="true"> </textarea>
+		<button onclick="selectall()">Select</button>
+	</div>
+	<p>備料:</p>
+
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="salami原味*" value="">
+		salami原味*
+	</label><input type="text" onchange="myFunction()" value="4" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="salami辣味*" value="">
+		salami辣味*
+	</label><input type="text" onchange="myFunction()" value="4" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="Coppa*" value="">
+		Coppa*
+	</label><input type="text" onchange="myFunction()" value="10" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="山火腿*" value="">
+		山火腿*
+	</label><input type="text" onchange="myFunction()" value="10" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="煙燻起士*" value="">
+		煙燻起士*
+	</label><input type="text" onchange="myFunction()" value="6" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="帕瑪森*" value="塊">
+		帕瑪森*
+	</label><input type="text" onchange="myFunction()" value="1" >
+	塊
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="康門貝爾*" value="">
+		康門貝爾*
+	</label><input type="text" onchange="myFunction()" value="2" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="藍紋起士*" value="">
+		藍紋起士*
+	</label><input type="text" onchange="myFunction()" value="2" >
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="魚薯條*" value="箱">
+		魚薯條*
+	</label><input type="text" onchange="myFunction()" value="1" >
+		箱
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="jimmy白松露油250ml*" value="罐">
+		jimmy白松露油250ml<br/>
+	</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<input type="text" onchange="myFunction()" value="2" >
+		罐
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="羅馬披薩皮40*25*" value="片">
+		羅馬披薩皮40*25*
+	</label><input type="text" onchange="myFunction()" value="2" >
+		片
+	<br/>
+	
+	<p>其它:</p>
+
+	<textarea onchange="myFunction()" id="addtext"></textarea><br/>
+	<input type="button" value="Enter" onclick="myFunction()">
+
+</div>
+<script>
+function myFunction() {
+	document.getElementById("myInput").value = "";
+	//document.getElementById("myInput").rows = 4;
+	
+	for (i = 0; i<11; i++){
+		
+		//var checkBox = document.querySelectorAll("input")[i];
+		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
+		var num = document.querySelectorAll('input[type="text"]')[i].value;
+		var add = document.getElementById("addtext").value;
+		
+		if (checkBox.checked == true){
+			document.getElementById("myInput").value += checkBox.name;
+			document.getElementById("myInput").value += num;
+			document.getElementById("myInput").value += checkBox.value;
+			document.getElementById("myInput").value += "\n";
+			//if (i > 1){
+			//	document.getElementById("myInput").rows += 1;
+			//}
+		} else { 
+			//text.style.display = "none";
+		}
+		//document.getElementById("myInput").value += i;
+	}
+	document.getElementById("myInput").value += add;
+	if (add != ''){
+		document.getElementById("myInput").value += "\n";
+	}
+	document.getElementById("myInput").value += "\n感謝";
+	
+}
+function selectall() {
+	document.getElementById("myInput").select();
+}
+var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    myFunction();
+  }
+});
+</script>
+
+
+</body>
+</html>
