@@ -32,7 +32,7 @@
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="糯米椒*" value="k">
 		糯米椒*
-	</label><input type="text" onchange="myFunction()" value="1" >
+	</label><input type="text" onchange="myFunction()" value="0.6" >
 		k
 	<br/>
 	<label>
@@ -44,7 +44,7 @@
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="板豆腐*" value="盒">
 		板豆腐*
-	</label><input type="text" onchange="myFunction()" value="2" >
+	</label><input type="text" onchange="myFunction()" value="1" >
 		盒
 	<br/>
 	<label>
@@ -62,7 +62,7 @@
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="水餃皮*" value="k">
 		水餃皮*
-	</label><input type="text" onchange="myFunction()" value="1" >
+	</label><input type="text" onchange="myFunction()" value="0.6" >
 		k
 	<br/>
 	<label>
@@ -74,7 +74,7 @@
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="羽衣甘藍*" value="k">
 		羽衣甘藍*
-	</label><input type="text" onchange="myFunction()" value="0.4" >
+	</label><input type="text" onchange="myFunction()" value="0.3" >
 		k
 	<br/>
 	<label>
@@ -239,14 +239,20 @@
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="二節翅*" value="k">
 		二節翅*
+	</label><input type="text" onchange="myFunction()" value="1" >
+		k
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="二節翅*" value="k">
+		三節翅*
 	</label><input type="text" onchange="myFunction()" value="0.6" >
 		k
 	<br/>
 	<label>
-		<input type="checkbox" onclick="myFunction()" name="發泡魷魚*" value="條">
-		發泡魷魚*
+		<input type="checkbox" onclick="myFunction()" name="二節翅*" value="k">
+		翅小腿*
 	</label><input type="text" onchange="myFunction()" value="1" >
-		條
+		k
 	<br/>
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="鯛魚*" value="包">
@@ -559,7 +565,7 @@ function myFunction() {
 	document.getElementById("myInput").value = "";
 	//document.getElementById("myInput").rows = 4;
 	
-	for (i = 0; i<85; i++){
+	for (i = 0; i<86; i++){
 		
 		//var checkBox = document.querySelectorAll("input")[i];
 		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
@@ -587,7 +593,10 @@ function myFunction() {
 	
 }
 function selectall() {
-	document.getElementById("myInput").select();
+	var copyText = document.getElementById("myInput");
+	copyText.select();
+	copyText.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(copyText.value);
 }
 var input = document.getElementById("myInput");
 input.addEventListener("keypress", function(event) {
