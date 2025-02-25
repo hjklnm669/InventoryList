@@ -90,6 +90,12 @@
 		瓶
 	<br/>
 	<label>
+		<input type="checkbox" onclick="myFunction()" name="蘋果醋*" value="瓶">
+		蘋果醋*
+	</label><input type="text" onchange="myFunction()" value="1" >
+		瓶
+	<br/>
+	<label>
 		<input type="checkbox" onclick="myFunction()" name="醬油1.5L*" value="瓶">
 		醬油1.5L*
 	</label><input type="text" onchange="myFunction()" value="1" >
@@ -162,10 +168,46 @@
 		包
 	<br/>
 	<label>
+		<input type="checkbox" onclick="myFunction()" name="白胡椒粉*" value="盒">
+		白胡椒粉*
+	</label><input type="text" onchange="myFunction()" value="1" >
+		盒
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="麵粉*" value="k">
+		麵粉*
+	</label><input type="text" onchange="myFunction()" value="0.6" >
+		k
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="玉米粉*" value="盒">
+		玉米粉*
+	</label><input type="text" onchange="myFunction()" value="2" >
+		盒
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="麵粉*" value="k">
+		泡打粉*
+	</label><input type="text" onchange="myFunction()" value="0.6" >
+		k
+	<br/>
+	<label>
 		<input type="checkbox" onclick="myFunction()" name="藤椒油*" value="瓶">
 		藤椒油*
 	</label><input type="text" onchange="myFunction()" value="1" >
 		瓶
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="乾燥牛肝蕈*" value="包">
+		乾燥牛肝蕈*
+	</label><input type="text" onchange="myFunction()" value="1" >
+		包
+	<br/>
+	<label>
+		<input type="checkbox" onclick="myFunction()" name="炸蒜片*" value="包">
+		炸蒜片*
+	</label><input type="text" onchange="myFunction()" value="1" >
+		包
 	<br/>
 	<label>
 		<input type="checkbox" onclick="myFunction()" name="海鹽片*" value="桶">
@@ -279,7 +321,7 @@ function myFunction() {
 	document.getElementById("myInput").value = "麻煩週三幫我送:\n\n";
 	//document.getElementById("myInput").rows = 4;
 	
-	for (i = 0; i<39; i++){
+	for (i = 0; i<46; i++){
 		
 		//var checkBox = document.querySelectorAll("input")[i];
 		var checkBox = document.querySelectorAll('input[type="checkbox"]')[i];
